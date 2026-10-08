@@ -22,9 +22,15 @@ export default function Home() {
     <main className="min-h-screen bg-pastel-greenLight text-gray-800 font-sans">
       {/* Header */}
       <header className="flex items-center justify-between px-8 py-6 max-w-6xl mx-auto">
-        <div className="text-3xl font-extrabold text-pastel-text tracking-tighter">Olso</div>
+        <div className="flex items-center gap-3">
+          <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 15L15 35L50 55L85 35L50 15Z" fill="#2c5f46"/>
+            <path d="M15 50L50 70L85 50V70L50 90L15 70V50Z" fill="#58a179"/>
+          </svg>
+          <div className="text-3xl font-extrabold text-pastel-text tracking-tighter">올소아카데미</div>
+        </div>
         <nav className="space-x-6 font-medium text-gray-600 hidden md:flex">
-          <a href="#about" className="hover:text-pastel-text transition-colors">올소 소개</a>
+          <a href="#about" className="hover:text-pastel-text transition-colors">올소아카데미 소개</a>
           <a href="#features" className="hover:text-pastel-text transition-colors">핵심 기능</a>
           <a href="#programs" className="hover:text-pastel-text transition-colors">학습 프로그램</a>
           <a href="#team" className="hover:text-pastel-text transition-colors">팀 소개</a>
@@ -42,7 +48,7 @@ export default function Home() {
           </h1>
           <p className="text-lg text-gray-600 leading-relaxed">
             문제 은행에서 추출한 문항으로 내 취약점을 정확히 파악하고, <br className="hidden md:block"/>
-            어떤 개념과 교재 페이지를 학습해야 하는지 올소가 알려드립니다.
+            어떤 개념과 교재 페이지를 학습해야 하는지 올소아카데미가 알려드립니다.
           </p>
           <div className="pt-4">
             <a href="https://class.olso.kr" className="inline-block bg-pastel-greenDark text-gray-900 px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
@@ -82,7 +88,7 @@ export default function Home() {
       {/* Features Section */}
       <section id="features" className="bg-white py-24">
         <div className="max-w-6xl mx-auto px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-16">올소만의 압도적인 학습 관리 시스템</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-16">올소아카데미만의 압도적인 학습 관리 시스템</h2>
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-pastel-greenLight p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-pastel-green/50">
@@ -140,7 +146,7 @@ export default function Home() {
       {/* Team Section */}
       <section id="team" className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-16">올소를 만드는 사람들</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-16">올소아카데미를 만드는 사람들</h2>
           <div className="flex flex-col md:flex-row justify-center gap-12">
             
             <div className="text-center w-full md:w-64">
@@ -168,9 +174,15 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-gray-50 py-12 border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-          <div className="text-xl font-bold text-gray-400 tracking-tighter">Olso</div>
+          <div className="flex items-center justify-center md:justify-start gap-2">
+            <svg width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 15L15 35L50 55L85 35L50 15Z" fill="#9ca3af"/>
+              <path d="M15 50L50 70L85 50V70L50 90L15 70V50Z" fill="#d1d5db"/>
+            </svg>
+            <div className="text-xl font-bold text-gray-400 tracking-tighter">올소아카데미</div>
+          </div>
           <div className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} Olso. All rights reserved. <br/>
+            © {new Date().getFullYear()} 올소아카데미 (Olso Academy). All rights reserved. <br/>
             contact@olso.kr | 대표 달마 | CTO 제현
           </div>
         </div>
