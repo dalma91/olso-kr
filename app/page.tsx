@@ -24,8 +24,8 @@ export default function Home() {
       <header className="flex items-center justify-between px-8 py-6 max-w-6xl mx-auto">
         <div className="flex items-center gap-3">
           <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50 15L15 35L50 55L85 35L50 15Z" fill="#2c5f46"/>
-            <path d="M15 50L50 70L85 50V70L50 90L15 70V50Z" fill="#58a179"/>
+            <circle cx="50" cy="50" r="40" fill="#e8f5e9" stroke="#2c5f46" strokeWidth="8"/>
+            <path d="M32 50L45 63L70 35" stroke="#58a179" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
           <div className="text-3xl font-extrabold text-pastel-text tracking-tighter">올소아카데미</div>
         </div>
@@ -176,8 +176,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <div className="flex items-center justify-center md:justify-start gap-2">
             <svg width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M50 15L15 35L50 55L85 35L50 15Z" fill="#9ca3af"/>
-              <path d="M15 50L50 70L85 50V70L50 90L15 70V50Z" fill="#d1d5db"/>
+              <circle cx="50" cy="50" r="40" fill="#f3f4f6" stroke="#9ca3af" strokeWidth="8"/>
+              <path d="M32 50L45 63L70 35" stroke="#d1d5db" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             <div className="text-xl font-bold text-gray-400 tracking-tighter">올소아카데미</div>
           </div>
