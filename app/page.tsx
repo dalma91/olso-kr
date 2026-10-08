@@ -1,6 +1,23 @@
-import React from 'react';
+"use client";
+
+import React, { useEffect, useState } from 'react';
+import { LineChart, Line, ResponsiveContainer, XAxis, Tooltip, CartesianGrid } from 'recharts';
 
 export default function Home() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const chartData = [
+    { month: '1월', score: 45 },
+    { month: '2월', score: 52 },
+    { month: '3월', score: 68 },
+    { month: '4월', score: 82 },
+    { month: '5월', score: 96 },
+  ];
+
   return (
     <main className="min-h-screen bg-pastel-greenLight text-gray-800 font-sans">
       {/* Header */}
@@ -28,14 +45,36 @@ export default function Home() {
             어떤 개념과 교재 페이지를 학습해야 하는지 올소가 알려드립니다.
           </p>
           <div className="pt-4">
-            <button className="bg-pastel-greenDark text-gray-900 px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+            <a href="https://class.olso.kr" className="inline-block bg-pastel-greenDark text-gray-900 px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
               무료 진단 테스트 시작하기
-            </button>
+            </a>
           </div>
         </div>
         <div className="flex-1 bg-white p-6 rounded-3xl shadow-xl border border-pastel-green relative">
-          <div className="w-full h-64 bg-pastel-greenLight rounded-xl flex items-center justify-center border border-gray-100">
-            <span className="text-pastel-text font-bold text-xl">대시보드 / 그래프 UI 예시 영역</span>
+          <h3 className="text-center text-gray-500 font-semibold mb-4">📈 나의 수학 역량 변화</h3>
+          <div className="w-full h-56 bg-pastel-greenLight/30 rounded-xl flex items-center justify-center pt-4 pr-4">
+            {mounted && (
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={chartData}>
+                  <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e0e0e0" />
+                  <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{ fill: '#888' }} dy={10} />
+                  <Tooltip 
+                    contentStyle={{ borderRadius: '10px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
+                    itemStyle={{ color: '#2c5f46', fontWeight: 'bold' }}
+                  />
+                  <Line 
+                    type="monotone" 
+                    dataKey="score" 
+                    stroke="#2c5f46" 
+                    strokeWidth={5} 
+                    dot={{ r: 6, fill: '#fff', stroke: '#2c5f46', strokeWidth: 3 }}
+                    activeDot={{ r: 8 }}
+                    animationDuration={2500}
+                    animationEasing="ease-out"
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            )}
           </div>
         </div>
       </section>
