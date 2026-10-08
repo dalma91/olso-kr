@@ -23,9 +23,26 @@ export default function Home() {
       {/* Header */}
       <header className="flex items-center justify-between px-8 py-6 max-w-6xl mx-auto">
         <div className="flex items-center gap-3">
-          <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 85 50 A 35 35 0 1 1 50 15" fill="none" stroke="#2c5f46" strokeWidth="12" strokeLinecap="round"/>
-            <path d="M 30 50 L 45 65 L 85 15" fill="none" stroke="#58a179" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round"/>
+          <svg width="44" height="44" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform hover:scale-110 transition-transform">
+            <defs>
+              <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#2c5f46" />
+                <stop offset="50%" stopColor="#58a179" />
+                <stop offset="100%" stopColor="#1b4332" />
+              </linearGradient>
+              <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#a7d7c5" />
+                <stop offset="100%" stopColor="#2c5f46" />
+              </linearGradient>
+              <linearGradient id="sphereGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fbbf24" />
+                <stop offset="100%" stopColor="#ea580c" />
+              </linearGradient>
+            </defs>
+            <path d="M 10 50 V 70 A 40 20 0 0 0 90 70 V 50 A 40 20 0 0 1 10 50 Z" fill="url(#bodyGrad)" />
+            <path d="M 35 50 V 70 A 15 7.5 0 0 1 65 70 V 50 A 15 7.5 0 0 0 35 50 Z" fill="#1b4332" />
+            <path fillRule="evenodd" clipRule="evenodd" d="M 10 50 A 40 20 0 0 0 90 50 A 40 20 0 0 0 10 50 Z M 35 50 A 15 7.5 0 0 1 65 50 A 15 7.5 0 0 1 35 50 Z" fill="url(#topGrad)"/>
+            <circle cx="50" cy="22" r="14" fill="url(#sphereGrad)" />
           </svg>
           <div className="text-3xl font-extrabold text-pastel-text tracking-tighter">올소아카데미</div>
         </div>
@@ -175,9 +192,26 @@ export default function Home() {
       <footer className="bg-gray-50 py-12 border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <div className="flex items-center justify-center md:justify-start gap-2">
-            <svg width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 85 50 A 35 35 0 1 1 50 15" fill="none" stroke="#9ca3af" strokeWidth="12" strokeLinecap="round"/>
-              <path d="M 30 50 L 45 65 L 85 15" fill="none" stroke="#d1d5db" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="bodyGradG" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#9ca3af" />
+                  <stop offset="50%" stopColor="#d1d5db" />
+                  <stop offset="100%" stopColor="#6b7280" />
+                </linearGradient>
+                <linearGradient id="topGradG" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#f3f4f6" />
+                  <stop offset="100%" stopColor="#9ca3af" />
+                </linearGradient>
+                <linearGradient id="sphereGradG" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#d1d5db" />
+                  <stop offset="100%" stopColor="#6b7280" />
+                </linearGradient>
+              </defs>
+              <path d="M 10 50 V 70 A 40 20 0 0 0 90 70 V 50 A 40 20 0 0 1 10 50 Z" fill="url(#bodyGradG)" />
+              <path d="M 35 50 V 70 A 15 7.5 0 0 1 65 70 V 50 A 15 7.5 0 0 0 35 50 Z" fill="#4b5563" />
+              <path fillRule="evenodd" clipRule="evenodd" d="M 10 50 A 40 20 0 0 0 90 50 A 40 20 0 0 0 10 50 Z M 35 50 A 15 7.5 0 0 1 65 50 A 15 7.5 0 0 1 35 50 Z" fill="url(#topGradG)"/>
+              <circle cx="50" cy="22" r="14" fill="url(#sphereGradG)" />
             </svg>
             <div className="text-xl font-bold text-gray-400 tracking-tighter">올소아카데미</div>
           </div>
